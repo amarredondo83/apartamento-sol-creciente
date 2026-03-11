@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apartamento en venta | Sol Creciente Mosquera</title>
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --primary: #0f766e;
+      --secondary: #0284c7;
+      --gold: #f59e0b;
+      --line: #e5e7eb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+    .hero {
+      background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.45)), url('BALCON-SALA-COMEDOR.jpg') center/cover no-repeat;
+      color: #fff;
+      padding: 78px 0;
+    }
+    h1,h2,h3 { margin: 0 0 12px; }
+    h1 { font-size: 2.3rem; }
+    h2 { font-size: 1.55rem; }
+    p { margin: 0 0 12px; }
+    .lead { max-width: 760px; }
+    .price {
+      display: inline-block;
+      margin-top: 16px;
+      background: var(--gold);
+      color: #111827;
+      padding: 12px 18px;
+      border-radius: 14px;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .chip {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.14);
+      border: 1px solid rgba(255,255,255,.24);
+      font-size: .95rem;
+    }
+    .cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-weight: 700;
+    }
+    .btn-primary { background: var(--primary); color: #fff; }
+    .btn-secondary { background: var(--secondary); color: #fff; }
+    .btn-light { background: #fff; color: #111827; }
+    .section { padding: 34px 0; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.04);
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+    .items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .item {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px;
+      background: #fbfcfd;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+    figure {
+      margin: 0;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+    figcaption {
+      padding: 10px 12px;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+    .video-links a { word-break: break-word; }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 28px 0 42px;
+    }
+    @media (max-width: 768px) {
+      h1 { font-size: 1.85rem; }
+      .grid-2 { grid-template-columns: 1fr; }
+      img { height: 200px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>Apartamento en venta en Sol Creciente, Mosquera</h1>
+      <p class="lead">83 m² con excelente distribución, 3 habitaciones, 2 baños, chimenea, doble balcón, parqueadero, bodega y conjunto residencial con zonas comunes tipo club house.</p>
+      <div class="price">Precio: $400.000.000 COP</div>
+      <div class="chips">
+        <span class="chip">83 m²</span>
+        <span class="chip">3 habitaciones</span>
+        <span class="chip">2 baños</span>
+        <span class="chip">Doble balcón</span>
+        <span class="chip">Chimenea</span>
+        <span class="chip">Parqueadero + bodega</span>
+      </div>
+      <div class="cta">
+        <a class="btn btn-primary" href="https://wa.me/573165301485?text=Hola,%20vi%20el%20apartamento%20en%20Sol%20Creciente%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank">WhatsApp 3165301485</a>
+        <a class="btn btn-secondary" href="https://wa.me/573177443278?text=Hola,%20vi%20el%20apartamento%20en%20Sol%20Creciente%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank">WhatsApp 3177443278</a>
+        <a class="btn btn-light" href="#videos">Ver videos del proyecto</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <div class="card">
+        <h2>Descripción del inmueble</h2>
+        <p>Apartamento ubicado en Sol Creciente, Mosquera, con 83 m² muy bien distribuidos. Cuenta con sala-comedor amplia, cocina abierta, chimenea, tres habitaciones, dos baños, pisos laminados, parqueadero, bodega y doble balcón.</p>
+        <p>El balcón de la sala-comedor tiene vista interna al conjunto y el balcón de la alcoba principal tiene vista hacia la calle principal. La habitación principal además cuenta con vestier y baño privado.</p>
+      </div>
+    </section>
+
+    <section class="section grid-2">
+      <div class="card">
+        <h2>Características principales</h2>
+        <div class="items">
+          <div class="item">Área construida: 83 m²</div>
+          <div class="item">3 habitaciones</div>
+          <div class="item">2 baños con puerta de vidrio templado</div>
+          <div class="item">Sala-comedor con chimenea</div>
+          <div class="item">Cocina abierta</div>
+          <div class="item">Patio o zona de ropas</div>
+          <div class="item">Pisos laminados</div>
+          <div class="item">Parqueadero y bodega</div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Club house y amenidades</h2>
+        <div class="items">
+          <div class="item">Piscina cubierta climatizada</div>
+          <div class="item">Piscina para niños</div>
+          <div class="item">Gimnasio dotado</div>
+          <div class="item">Cancha de squash</div>
+          <div class="item">Sauna, turco y jacuzzi</div>
+          <div class="item">Zona BBQ</div>
+          <div class="item">Salones sociales y teatrino</div>
+          <div class="item">Ascensor y áreas verdes</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h2>Galería del apartamento</h2>
+        <div class="gallery">
+          <figure><img src="BALCON-SALA-COMEDOR.jpg" alt="Sala comedor con balcón"><figcaption>Sala-comedor con excelente iluminación natural.</figcaption></figure>
+          <figure><img src="BALCON.jpg" alt="Balcón social"><figcaption>Balcón social con vista interna al conjunto.</figcaption></figure>
+          <figure><img src="COCINA-1.jpg" alt="Cocina principal"><figcaption>Cocina abierta integrada a la zona social.</figcaption></figure>
+          <figure><img src="COCINA-2.jpg" alt="Cocina lateral"><figcaption>Acabados funcionales y buena distribución.</figcaption></figure>
+          <figure><img src="CUARTO-PPAL.jpg" alt="Habitación principal"><figcaption>Habitación principal con salida a balcón.</figcaption></figure>
+          <figure><img src="VESTIER_CUARTO-PPAL.jpg" alt="Vestier habitación principal"><figcaption>Vestier en la alcoba principal.</figcaption></figure>
+          <figure><img src="BANO-CUARTO-PPAL.jpg" alt="Baño principal"><figcaption>Baño privado de la habitación principal.</figcaption></figure>
+          <figure><img src="CUARTO_A.jpg" alt="Habitación auxiliar"><figcaption>Habitación auxiliar con buena entrada de luz.</figcaption></figure>
+          <figure><img src="BANO_AUX.jpg" alt="Baño auxiliar"><figcaption>Baño auxiliar con división en vidrio templado.</figcaption></figure>
+          <figure><img src="VISTA-BALCON-CTO-PPAL.jpg" alt="Vista desde balcón principal"><figcaption>Vista desde el balcón de la alcoba principal.</figcaption></figure>
+          <figure><img src="PATIO-ROPAS.jpg" alt="Zona de ropas"><figcaption>Zona de ropas independiente.</figcaption></figure>
+          <figure><img src="BALCON-SALA_COMEDOR.jpg" alt="Sala con balcón"><figcaption>Otra vista de la zona social.</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h2>Zonas comunes</h2>
+        <div class="gallery">
+          <figure><img src="PISCINA-GENERAL.jpg" alt="Piscina cubierta"><figcaption>Piscina cubierta climatizada.</figcaption></figure>
+          <figure><img src="PISCINA-NINOS.jpg" alt="Piscina niños"><figcaption>Piscina para niños.</figcaption></figure>
+          <figure><img src="GYM.jpg" alt="Gimnasio"><figcaption>Gimnasio dotado.</figcaption></figure>
+          <figure><img src="CANCHA-SQUASH.jpg" alt="Cancha squash"><figcaption>Cancha de squash.</figcaption></figure>
+          <figure><img src="JACUZZI.jpg" alt="Jacuzzi"><figcaption>Jacuzzi.</figcaption></figure>
+          <figure><img src="SAUNA.jpg" alt="Sauna"><figcaption>Sauna.</figcaption></figure>
+          <figure><img src="TURCO.jpg" alt="Turco"><figcaption>Turco.</figcaption></figure>
+          <figure><img src="HALL-SALAS.jpg" alt="Zona social conjunto"><figcaption>Espacios comunes del conjunto.</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="videos">
+      <div class="card video-links">
+        <h2>Videos del proyecto</h2>
+        <p>El proyecto Sol Creciente se presenta como un parque residencial dentro de Ciudad del Sol con 20 torres de 8 pisos y club house con gimnasio, piscina climatizada, juegos, squash, BBQ, zonas verdes y teatrino. El video de Club House también destaca zonas como gimnasio dotado, salón de spinning, piscina cubierta climatizada, juegos, squash, sauna, turco y jacuzzi. [page:195][page:197]</p>
+        <p><a href="https://www.youtube.com/watch?v=6U3YFxQHYFw" target="_blank">Ver video de la constructora: Sol Creciente | Avance de obra Julio 2019</a></p>
+        <p><a href="https://www.youtube.com/watch?v=drjYga4Jx5c" target="_blank">Ver video Club House: Parque Residencial Sol Creciente - Club House</a></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h2>Contacto</h2>
+        <p><strong>Precio visible:</strong> $400.000.000 COP</p>
+        <p>WhatsApp 1: <a href="https://wa.me/573165301485" target="_blank">3165301485</a></p>
+        <p>WhatsApp 2: <a href="https://wa.me/573177443278" target="_blank">3177443278</a></p>
+        <div class="cta">
+          <a class="btn btn-primary" href="https://wa.me/573165301485?text=Hola,%20quiero%20informaci%C3%B3n%20del%20apartamento%20en%20Sol%20Creciente" target="_blank">Solicitar información</a>
+          <a class="btn btn-secondary" href="https://www.youtube.com/watch?v=drjYga4Jx5c" target="_blank">Ver video Club House</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">Apartamento en venta en Sol Creciente, Mosquera | Precio: $400.000.000 COP</div>
+  </footer>
+</body>
+</html>

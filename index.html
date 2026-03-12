@@ -5,13 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Apartamento en venta | Sol Creciente Mosquera</title>
   <style>
+    .banner-strip {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 8px;
+  margin-top: 16px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.banner-strip::-webkit-scrollbar {
+  height: 10px;
+}
+
+.banner-strip::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+}
+
+.banner-slide {
+  min-width: 85%;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.banner-slide img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+  background: #f3f4f6;
+}
+
+@media (max-width: 768px) {
+  .banner-slide {
+    min-width: 92%;
+  }
+
+  .banner-slide img {
+    height: 240px;
+  }
+}
+
     .photo-only {
   background: #fff;
   border: 1px solid #e5e7eb;
   border-radius: 14px;
   overflow: hidden;
 }
-
+  
 .photo-only img {
   width: 100%;
   height: 420px;
@@ -191,25 +238,30 @@
 </head>
 <body>
   <header class="hero">
-    <div class="container">
-      <h1>Apartamento en venta en Sol Creciente, Mosquera</h1>
-      <p class="lead">83 m² con excelente distribución, 3 habitaciones, 2 baños, chimenea, doble balcón, parqueadero, bodega y conjunto residencial con zonas comunes tipo club house.</p>
-      <div class="price">Precio: $400.000.000 COP</div>
-      <div class="chips">
-        <span class="chip">83 m²</span>
-        <span class="chip">3 habitaciones</span>
-        <span class="chip">2 baños</span>
-        <span class="chip">Doble balcón</span>
-        <span class="chip">Chimenea</span>
-        <span class="chip">Parqueadero + bodega</span>
-      </div>
-      <div class="cta">
-        <a class="btn btn-primary" href="https://wa.me/573165301485?text=Hola,%20vi%20el%20apartamento%20en%20Sol%20Creciente%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank">WhatsApp 3165301485</a>
-        <a class="btn btn-secondary" href="https://wa.me/573177443278?text=Hola,%20vi%20el%20apartamento%20en%20Sol%20Creciente%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank">WhatsApp 3177443278</a>
-        <a class="btn btn-light" href="#videos">Ver videos del proyecto</a>
-      </div>
+  <div class="container">
+    <h1>Apartamento en venta en Sol Creciente, Mosquera</h1>
+    <p class="lead">83 m² con excelente distribución, 3 habitaciones, 2 baños, chimenea, doble balcón, parqueadero, bodega y conjunto residencial con zonas comunes tipo club house.</p>
+    <div class="price">Precio: $400.000.000 COP</div>
+
+    <div class="chips">
+      <span class="chip">83 m²</span>
+      <span class="chip">3 habitaciones + Estudio</span>
+      <span class="chip">2 baños</span>
+      <span class="chip">Doble balcón</span>
+      <span class="chip">Sala Comedor con Chimenea</span>
+      <span class="chip">Cocina + patio de ropas</span>
+      <span class="chip">Parqueadero + bodega</span>
     </div>
-  </header>
+
+    <div class="cta">
+      <a class="btn btn-primary" href="https://wa.me/573165301485?text=Hola,%20vi%20el%20apartamento%20en%20Sol%20Creciente%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener noreferrer">WhatsApp 3165301485</a>
+      <a class="btn btn-secondary" href="https://wa.me/573177443278?text=Hola,%20vi%20el%20apartamento%20en%20Sol%20Creciente%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener noreferrer">WhatsApp 3177443278</a>
+      <a class="btn btn-light" href="https://maps.app.goo.gl/esPffC94APgfdA8T9" target="_blank" rel="noopener noreferrer">Ver ubicación</a>
+      <a class="btn btn-light" href="#videos">Ver videos del proyecto</a>
+    </div>
+  </div>
+</header>
+
 
   <section class="section">
   <div class="card">
@@ -235,7 +287,7 @@
         </div>
       </div>
       <div class="card">
-        <h2>Club house y amenidades</h2>
+        <h2>Club house</h2>
         <div class="items">
           <div class="item">Piscina cubierta climatizada</div>
           <div class="item">Piscina para niños</div>
@@ -243,7 +295,9 @@
           <div class="item">Cancha de squash</div>
           <div class="item">Sauna, turco y jacuzzi</div>
           <div class="item">Zona BBQ</div>
-          <div class="item">Salones sociales y teatrino</div>
+          <div class="item">Salones sociales</div>
+          <div class="item">Teatrino</div>
+          <div class="item">Cancha baloncesto + microfutbol</div>
           <div class="item">Ascensor y áreas verdes</div>
         </div>
       </div>
@@ -267,8 +321,7 @@
       <div class="photo-only"><img src="SALA_CHIMENEA.jpeg" alt="Sala con chimenea"></div>
       <div class="photo-only"><img src="COMEDOR.jpeg" alt="Comedor"></div>
       <div class="photo-only"><img src="COMEDOR CHIMENEA.jpeg" alt="Sala comedor con chimenea"></div>
-      <div class="photo-only"><img src="HALL SALAS.jpeg" alt="Zona social interior"></div>
-    </div>
+  </div>
   </div>
 </section>
 
@@ -352,11 +405,28 @@
 <section class="section">
   <div class="card">
     <h2>Complementos del inmueble</h2>
-    <div class="gallery">
-      <div class="photo-only"><img src="BODEGA.jpeg" alt="Bodega"></div>
+    <p>Aquí puedes ver imágenes adicionales del inmueble y del conjunto en formato tipo banner.</p>
+
+    <div class="banner-strip">
+      <div class="banner-slide">
+        <img src="BODEGA.jpeg" alt="Bodega del inmueble">
+      </div>
+      <div class="banner-slide">
+        <img src="CONJUNTO.jpg" alt="Vista general del conjunto">
+      </div>
+      <div class="banner-slide">
+        <img src="FACHADA.jpg" alt="Fachada del conjunto">
+      </div>
+      <div class="banner-slide">
+        <img src="HALL SALAS.jpeg" alt="Zona social interior">
+      </div>
+      <div class="banner-slide">
+        <img src="BALCON.jpeg" alt="Vista adicional de la zona social">
+      </div>
     </div>
   </div>
 </section>
+
 
 <section class="section">
   <div class="card">

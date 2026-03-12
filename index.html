@@ -5,140 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Apartamento en venta | Sol Creciente Mosquera</title>
   <style>
-    .banner-strip {
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding-bottom: 8px;
-  margin-top: 16px;
-  -webkit-overflow-scrolling: touch;
-}
-
-.banner-strip::-webkit-scrollbar {
-  height: 10px;
-}
-
-.banner-strip::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 999px;
-}
-
-.banner-slide {
-  min-width: 55%;
-  flex: 0 0 auto;
-  scroll-snap-align: start;
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-.banner-slide img {
-  width: 100%;
-  height: 260px;
-  object-fit: contain;
-  display: block;
-  background: #f3f4f6;
-}
-
-@media (max-width: 768px) {
-  .banner-slide {
-    min-width: 88%;
-  }
-
-  .banner-slide img {
-    height: 200px;
-  }
-}
-
-}
-
-.banner-slide {
-  min-width: 85%;
-  flex: 0 0 auto;
-  scroll-snap-align: start;
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-.banner-slide img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  display: block;
-  background: #f3f4f6;
-}
-
-@media (max-width: 768px) {
-  .banner-slide {
-    min-width: 88%;
-  }
-
-  .banner-slide img {
-    height: 200px;
-  }
-}
-
-    .photo-only {
-  background: #fff;
-  border: 1px solid #e5e7eb;
-  border-radius: 14px;
-  overflow: hidden;
-}
-  
-.photo-only img {
-  width: 100%;
-  height: 420px;
-  object-fit: contain;
-  display: block;
-  background: #f3f4f6;
-}
-
-@media (max-width: 768px) {
-  .photo-only img {
-    height: 280px;
-  }
-}
-
-    .video-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 18px;
-  margin-top: 16px;
-}
-
-.video-card {
-  background: #fff;
-  border: 1px solid #e5e7eb;
-  border-radius: 14px;
-  overflow: hidden;
-}
-
-.video-card video {
-  width: 100%;
-  height: 420px;
-  object-fit: contain;
-  display: block;
-  background: #f3f4f6;
-}
-
-.video-card p {
-  margin: 0;
-  padding: 12px 14px;
-  color: #6b7280;
-  font-size: 0.95rem;
-}
-
-@media (max-width: 768px) {
-  .video-card video {
-    height: 300px;
-  }
-}
+    :root {
+      --bg: #f8fafc;
+      --text: #0f172a;
+      --muted: #6b7280;
+      --card: #ffffff;
+      --line: #e5e7eb;
+      --primary: #0f766e;
+      --secondary: #1d4ed8;
+      --gold: #f4d35e;
+    }
 
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -146,23 +25,27 @@
       color: var(--text);
       line-height: 1.6;
     }
+
     .container {
       width: min(1120px, 92%);
       margin: 0 auto;
     }
+
     .hero {
-  background:
-    linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.55)),
-    url('CONJUNTO.jpg') center center / cover no-repeat;
-  color: #fff;
-  padding: 100px 0;
-}
-    
-    h1,h2,h3 { margin: 0 0 12px; }
+      background:
+        linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.55)),
+        url('CONJUNTO.jpg') center center / cover no-repeat;
+      color: #fff;
+      padding: 100px 0;
+    }
+
+    h1, h2, h3 { margin: 0 0 12px; }
     h1 { font-size: 2.3rem; }
     h2 { font-size: 1.55rem; }
     p { margin: 0 0 12px; }
+
     .lead { max-width: 760px; }
+
     .price {
       display: inline-block;
       margin-top: 16px;
@@ -173,12 +56,14 @@
       font-size: 1.2rem;
       font-weight: 700;
     }
+
     .chips {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
       margin-top: 18px;
     }
+
     .chip {
       padding: 8px 12px;
       border-radius: 999px;
@@ -186,12 +71,14 @@
       border: 1px solid rgba(255,255,255,.24);
       font-size: .95rem;
     }
+
     .cta {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
       margin-top: 22px;
     }
+
     .btn {
       display: inline-block;
       text-decoration: none;
@@ -199,10 +86,13 @@
       border-radius: 12px;
       font-weight: 700;
     }
+
     .btn-primary { background: var(--primary); color: #fff; }
     .btn-secondary { background: var(--secondary); color: #fff; }
     .btn-light { background: #fff; color: #111827; }
+
     .section { padding: 34px 0; }
+
     .card {
       background: var(--card);
       border: 1px solid var(--line);
@@ -210,98 +100,184 @@
       padding: 24px;
       box-shadow: 0 8px 24px rgba(0,0,0,.04);
     }
+
     .grid-2 {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 18px;
     }
+
     .items {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 12px;
       margin-top: 14px;
     }
+
     .item {
       border: 1px solid var(--line);
       border-radius: 12px;
       padding: 14px;
       background: #fbfcfd;
     }
+
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 18px;
       margin-top: 16px;
     }
-    figure {
-      margin: 0;
+
+    .photo-only {
       background: #fff;
-      border: 1px solid var(--line);
+      border: 1px solid #e5e7eb;
       border-radius: 14px;
       overflow: hidden;
     }
-    img {
+
+    .photo-only img {
       width: 100%;
       height: 420px;
       object-fit: contain;
       display: block;
       background: #f3f4f6;
     }
-    figcaption {
-      padding: 10px 12px;
-      color: var(--muted);
-      font-size: .95rem;
+
+    .banner-strip {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 8px;
+      margin-top: 16px;
+      -webkit-overflow-scrolling: touch;
     }
+
+    .banner-strip::-webkit-scrollbar {
+      height: 10px;
+    }
+
+    .banner-strip::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 999px;
+    }
+
+    .banner-slide {
+      min-width: 45%;
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .banner-slide img {
+      width: 100%;
+      height: 220px;
+      object-fit: contain;
+      display: block;
+      background: #f3f4f6;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 18px;
+      margin-top: 16px;
+    }
+
+    .video-card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .video-card video {
+      width: 100%;
+      height: 420px;
+      object-fit: contain;
+      display: block;
+      background: #f3f4f6;
+    }
+
+    .video-card p {
+      margin: 0;
+      padding: 12px 14px;
+      color: #6b7280;
+      font-size: 0.95rem;
+    }
+
     .video-links a { word-break: break-word; }
+
     footer {
       text-align: center;
       color: var(--muted);
       padding: 28px 0 42px;
     }
+
     @media (max-width: 768px) {
       h1 { font-size: 1.85rem; }
       .grid-2 { grid-template-columns: 1fr; }
-      img { height: 200px; }
+
+      .photo-only img {
+        height: 280px;
+      }
+
+      .banner-slide {
+        min-width: 80%;
+      }
+
+      .banner-slide img {
+        height: 180px;
+      }
+
+      .video-card video {
+        height: 300px;
+      }
     }
   </style>
 </head>
 <body>
   <header class="hero">
-  <div class="container">
-    <h1>Apartamento en venta en Sol Creciente, Mosquera</h1>
-    <p class="lead">83 m² con excelente distribución, 3 habitaciones, 2 baños, chimenea, doble balcón, parqueadero, bodega. El conjunto residencial cuenta con zonas comunes tipo club house.</p>
-    <div class="price">Precio: $400.000.000 COP</div>
+    <div class="container">
+      <h1>Apartamento en venta en Sol Creciente, Mosquera</h1>
+      <p class="lead">83 m² con excelente distribución, 3 habitaciones, 2 baños, chimenea, doble balcón, parqueadero, bodega. El conjunto residencial cuenta con zonas comunes tipo club house.</p>
+      <div class="price">Precio: $400.000.000 COP</div>
 
-    <div class="chips">
-      <span class="chip">83 m²</span>
-      <span class="chip">3 habitaciones + Estudio</span>
-      <span class="chip">2 baños</span>
-      <span class="chip">Doble balcón</span>
-      <span class="chip">Sala Comedor con Chimenea</span>
-      <span class="chip">Cocina + patio de ropas</span>
-      <span class="chip">Parqueadero + bodega</span>
+      <div class="chips">
+        <span class="chip">83 m²</span>
+        <span class="chip">3 habitaciones + Estudio</span>
+        <span class="chip">2 baños</span>
+        <span class="chip">Doble balcón</span>
+        <span class="chip">Sala Comedor con Chimenea</span>
+        <span class="chip">Cocina + patio de ropas</span>
+        <span class="chip">Parqueadero + bodega</span>
+      </div>
+
+      <div class="cta">
+        <a class="btn btn-primary" href="https://wa.me/573165301485?text=Hola,%20vi%20el%20apartamento%20en%20Sol%20Creciente%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener noreferrer">WhatsApp 3165301485</a>
+        <a class="btn btn-secondary" href="https://wa.me/573177443278?text=Hola,%20vi%20el%20apartamento%20en%20Sol%20Creciente%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener noreferrer">WhatsApp 3177443278</a>
+        <a class="btn btn-light" href="https://maps.app.goo.gl/esPffC94APgfdA8T9" target="_blank" rel="noopener noreferrer">Ver ubicación</a>
+        <a class="btn btn-light" href="#videos">Ver videos del proyecto</a>
+      </div>
     </div>
-
-    <div class="cta">
-      <a class="btn btn-primary" href="https://wa.me/573165301485?text=Hola,%20vi%20el%20apartamento%20en%20Sol%20Creciente%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener noreferrer">WhatsApp 3165301485</a>
-      <a class="btn btn-secondary" href="https://wa.me/573177443278?text=Hola,%20vi%20el%20apartamento%20en%20Sol%20Creciente%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener noreferrer">WhatsApp 3177443278</a>
-      <a class="btn btn-light" href="https://maps.app.goo.gl/esPffC94APgfdA8T9" target="_blank" rel="noopener noreferrer">Ver ubicación</a>
-      <a class="btn btn-light" href="#videos">Ver videos del proyecto</a>
-    </div>
-  </div>
-</header>
-
+  </header>
 
   <section class="section">
-  <div class="card">
-    <h2>Descripción del inmueble</h2>
-    <p>Apartamento ubicado en Mosquera, Cundinamarca, en la ciudadela Los Soles, dentro del conjunto residencial Sol Creciente. Su ubicación en sexto piso le brinda excelente iluminación natural, buena ventilación y una vista agradable.</p>
-    <p>Cuenta con 83 m² muy bien distribuidos, sala-comedor amplia, cocina abierta, chimenea, tres habitaciones, dos baños, pisos laminados, parqueadero, bodega y doble balcón.</p>
-    <p>El balcón de la sala-comedor tiene vista interna al conjunto y el balcón de la alcoba principal tiene vista hacia la calle principal. La habitación principal además cuenta con vestier y baño privado.</p>
-  </div>
-</section>
+    <div class="container">
+      <div class="card">
+        <h2>Descripción del inmueble</h2>
+        <p>Apartamento ubicado en Mosquera, Cundinamarca, en la ciudadela Los Soles, dentro del conjunto residencial Sol Creciente. Su ubicación en sexto piso le brinda excelente iluminación natural, buena ventilación y una vista agradable.</p>
+        <p>Cuenta con 83 m² muy bien distribuidos, sala-comedor amplia, cocina abierta, chimenea, tres habitaciones, dos baños, pisos laminados, parqueadero, bodega y doble balcón.</p>
+        <p>El balcón de la sala-comedor tiene vista interna al conjunto y el balcón de la alcoba principal tiene vista hacia la calle principal. La habitación principal además cuenta con vestier y baño privado.</p>
+      </div>
+    </div>
+  </section>
 
-    <section class="section grid-2">
+  <section class="section">
+    <div class="container grid-2">
       <div class="card">
         <h2>Características principales</h2>
         <div class="items">
@@ -315,6 +291,7 @@
           <div class="item">Parqueadero y bodega</div>
         </div>
       </div>
+
       <div class="card">
         <h2>Club house</h2>
         <div class="items">
@@ -330,224 +307,250 @@
           <div class="item">Ascensor y áreas verdes</div>
         </div>
       </div>
-    </section>
-
-    <section class="section">
-  <div class="card">
-    <h2>Entrada</h2>
-    <div class="gallery">
-      <div class="photo-only"><img src="FACHADA.jpg" alt="Fachada del conjunto"></div>
-      <div class="photo-only"><img src="CONJUNTO.jpg" alt="Vista del conjunto"></div>
-      <div class="photo-only"><img src="Fachada conjunto.jpeg" alt="Fachada conjunto"></div>
     </div>
-    </div>
-</section>
+  </section>
 
-<section class="section">
-  <div class="card">
-    <h2>Apartamento</h2>
-    <div class="gallery">
-      <div class="photo-only"><img src="SALA_CHIMENEA.jpeg" alt="Sala con chimenea"></div>
-      <div class="photo-only"><img src="COMEDOR.jpeg" alt="Comedor"></div>
-      <div class="photo-only"><img src="COMEDOR CHIMENEA.jpeg" alt="Sala comedor con chimenea"></div>
-  </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="card">
-    <h2>Balcón Sala - Comedor </h2>
-    <div class="gallery">
-      <div class="photo-only"><img src="BALCON SALA COMEDOR.jpeg" alt="Balcón social"></div>
-      <div class="photo-only"><img src="BALCON SALA_COMEDOR.jpeg" alt="Otra vista del balcón social"></div>
-      <div class="photo-only"><img src="BALCON.jpeg" alt="Balcón de la zona social"></div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="card">
-    <h2>Cocina</h2>
-    <div class="gallery">
-      <div class="photo-only"><img src="COCINA 1.jpeg" alt="Cocina abierta"></div>
-      <div class="photo-only"><img src="COCINA 2.jpeg" alt="Cocina lateral"></div>
-      <div class="photo-only"><img src="COCINA 3.jpeg" alt="Otra vista de la cocina"></div>
-      <div class="photo-only"><img src="PATIO ROPAS.jpeg" alt="Patio de ropas"></div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="card">
-    <h2>Hall interior</h2>
-    <div class="gallery">
-      <div class="photo-only"><img src="HALL PPAL.jpeg" alt="Hall principal"></div>
-      <div class="photo-only"><img src="HALL PPAL 1.jpeg" alt="Hall principal uno"></div>
-      <div class="photo-only"><img src="HALL PPAL 2.jpeg" alt="Hall principal dos"></div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="card">
-    <h2>Habitación 1</h2>
-    <div class="gallery">
-      <div class="photo-only"><img src="CUARTO_A.jpeg" alt="Habitación auxiliar uno"></div>
-      <div class="photo-only"><img src="CUARTO_A1.jpeg" alt="Otra vista habitación auxiliar uno"></div>
-      <div class="photo-only"><img src="Cuarto aux2.jpeg" alt="Baño auxiliar"></div>
-      <div class="photo-only"><img src="Cuarto aux3.jpeg" alt="Baño auxiliar"></div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="card">
-    <h2>Habitación 2</h2>
-    <div class="gallery">
-      <div class="photo-only"><img src="Cuarto A_1.jpeg" alt="Habitación auxiliar dos"></div>
-      <div class="photo-only"><img src="Cuarto A_2.jpeg" alt="Habitación auxiliar dos"></div>
-      <div class="photo-only"><img src="Cuarto A_3.jpeg" alt="Habitación auxiliar dos"></div>
-      <div class="photo-only"><img src="Cuarto A_4.jpeg" alt="Habitación auxiliar dos"></div>
-      <div class="photo-only"><img src="Cuarto A_5.jpeg" alt="Habitación auxiliar dos"></div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="card">
-    <h2>Habitación principal</h2>
-    <div class="gallery">
-      <div class="photo-only"><img src="CUARTO PPAL.jpeg" alt="Habitación principal"></div>
-      <div class="photo-only"><img src="Cuarto ppal.jpeg" alt="Habitación principal"></div>
-      <div class="photo-only"><img src="Cuarto ppal2.jpeg" alt="Habitación principal"></div>
-      <div class="photo-only"><img src="Cuarto ppal3.jpeg" alt="Habitación principal"></div>
-      <div class="photo-only"><img src="VESTIER_CUARTO PPAL.jpeg" alt="Vestier habitación principal"></div>
-      <div class="photo-only"><img src="VESTIER_BAÑO CUARTO PPAL.jpeg" alt="Vestier y baño principal"></div>
-      <div class="photo-only"><img src="BAÑO CUARTO PPAL.jpeg" alt="Baño principal"></div>
-      <div class="photo-only"><img src="BALCON CTO PPAL.jpeg" alt="Baño principal"></div>
-      <div class="photo-only"><img src="Balcon cuarto ppal.jpeg" alt="Baño principal"></div>
-     <div class="photo-only"><img src="VISTA BALCON CTO PPAL.jpeg" alt="Baño principal"></div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="card">
-    <h2>Complementos del inmueble</h2>
-    <p>Aquí puedes ver imágenes adicionales del apartamento y del conjunto en formato tipo banner.</p>
-
-    <div class="banner-strip">
-      <div class="banner-slide">
-        <img src="BODEGA.jpeg" alt="Bodega del inmueble">
-      </div>
-      <div class="banner-slide">
-        <img src="bodega3.jpeg" alt="Otra vista de la bodega">
-      </div>
-      <div class="banner-slide">
-        <img src="CONJUNTO.jpg" alt="Vista general del conjunto">
-      </div>
-      <div class="banner-slide">
-        <img src="FACHADA.jpg" alt="Fachada del conjunto">
-      </div>
-      <div class="banner-slide">
-        <img src="Fachada conjunto.jpg" alt="Otra vista de la fachada del conjunto">
-      </div>
-      <div class="banner-slide">
-        <img src="Entrada apto.jpeg" alt="Detalle de entrada al apartamento">
-      </div>
-      <div class="banner-slide">
-        <img src="Espacio mueble.jpeg" alt="Espacio adicional del apartamento">
-      </div>
-      <div class="banner-slide">
-        <img src="Balcon cuarto ppal.jpeg" alt="Otra vista del balcón principal">
-      </div>
-      <div class="banner-slide">
-        <img src="estudio2.jpeg" alt="Espacio flexible o estudio">
-      </div>
-      <div class="banner-slide">
-        <img src="Gym entrada.jpeg" alt="Detalle adicional">
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <h2>Entrada</h2>
+        <div class="gallery">
+          <div class="photo-only"><img src="FACHADA.jpg" alt="Fachada del conjunto"></div>
+          <div class="photo-only"><img src="CONJUNTO.jpg" alt="Vista del conjunto"></div>
+          <div class="photo-only"><img src="Fachada conjunto.jpeg" alt="Fachada conjunto"></div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section">
-  <div class="card">
-    <h2>Zonas comunes</h2>
-    <div class="gallery">
-      <div class="photo-only"><img src="PISCINA GENERAL.jpeg" alt="Piscina cubierta"></div>
-      <div class="photo-only"><img src="PISCINA NIÑOS.jpeg" alt="Piscina niños"></div>
-      <div class="photo-only"><img src="GYM.jpeg" alt="Gimnasio"></div>
-      <div class="photo-only"><img src="CANCHA SQUASH.jpeg" alt="Cancha de squash"></div>
-      <div class="photo-only"><img src="JACUZZI.jpeg" alt="Jacuzzi"></div>
-      <div class="photo-only"><img src="SAUNA.jpeg" alt="Sauna"></div>
-      <div class="photo-only"><img src="TURCO.jpeg" alt="Turco"></div>
-      <div class="photo-only"><img src="SALON SOCIAL.jpeg" alt="Salon social"></div>
-      <div class="photo-only"><img src="BQQ.jpeg" alt="Zona BBQ"></div>
-      <div class="photo-only"><img src="BQQ 2.jpeg" alt="Otra vista zona BBQ"></div>
-    </div>
-  </div>
-</section>
- 
-<section class="section">
-  <div class="card">
-    <h2>Videos de las zonas sociales</h2>
-    <p>Conoce mejor las amenidades y espacios comunes del conjunto a través de estos recorridos en video.</p>
-
-    <div class="video-grid">
-      <div class="video-card">
-        <video controls preload="metadata">
-          <source src="TEATRINO.mp4" type="video/mp4">
-          Tu navegador no soporta la reproducción de video.
-        </video>
-        <p>Teatrino y espacios sociales del conjunto.</p>
-      </div>
-
-      <div class="video-card">
-        <video controls preload="metadata">
-          <source src="JUEGOS.mp4" type="video/mp4">
-          Tu navegador no soporta la reproducción de video.
-        </video>
-        <p>Zona de juegos y espacios familiares.</p>
-      </div>
-
-      <div class="video-card">
-        <video controls preload="metadata">
-          <source src="PLAY GROUND.mp4" type="video/mp4">
-          Tu navegador no soporta la reproducción de video.
-        </video>
-        <p>Playground y áreas comunes del conjunto.</p>
-      </div>
-
-      <div class="video-card">
-        <video controls preload="metadata">
-          <source src="ZONAS HUMEDAS.mp4" type="video/mp4">
-          Tu navegador no soporta la reproducción de video.
-        </video>
-        <p>Zonas húmedas y espacios de bienestar.</p>
-      </div>
-
-      <div class="video-card">
-        <video controls preload="metadata">
-          <source src="PISCINA.mp4" type="video/mp4">
-          Tu navegador no soporta la reproducción de video.
-        </video>
-        <p>Piscina y amenidades del conjunto.</p>
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <h2>Apartamento</h2>
+        <div class="gallery">
+          <div class="photo-only"><img src="SALA_CHIMENEA.jpeg" alt="Sala con chimenea"></div>
+          <div class="photo-only"><img src="COMEDOR.jpeg" alt="Comedor"></div>
+          <div class="photo-only"><img src="COMEDOR CHIMENEA.jpeg" alt="Sala comedor con chimenea"></div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-   
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <h2>Balcón Sala - Comedor</h2>
+        <div class="gallery">
+          <div class="photo-only"><img src="BALCON SALA COMEDOR.jpeg" alt="Balcón social"></div>
+          <div class="photo-only"><img src="BALCON SALA_COMEDOR.jpeg" alt="Otra vista del balcón social"></div>
+          <div class="photo-only"><img src="BALCON.jpeg" alt="Balcón de la zona social"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <h2>Cocina</h2>
+        <div class="gallery">
+          <div class="photo-only"><img src="COCINA 1.jpeg" alt="Cocina abierta"></div>
+          <div class="photo-only"><img src="COCINA 2.jpeg" alt="Cocina lateral"></div>
+          <div class="photo-only"><img src="COCINA 3.jpeg" alt="Otra vista de la cocina"></div>
+          <div class="photo-only"><img src="PATIO ROPAS.jpeg" alt="Patio de ropas"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <h2>Hall interior</h2>
+        <div class="gallery">
+          <div class="photo-only"><img src="HALL PPAL.jpeg" alt="Hall principal"></div>
+          <div class="photo-only"><img src="HALL PPAL 1.jpeg" alt="Hall principal uno"></div>
+          <div class="photo-only"><img src="HALL PPAL 2.jpeg" alt="Hall principal dos"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <h2>Habitación 1</h2>
+        <div class="gallery">
+          <div class="photo-only"><img src="CUARTO_A.jpeg" alt="Habitación auxiliar uno"></div>
+          <div class="photo-only"><img src="CUARTO_A1.jpeg" alt="Otra vista habitación auxiliar uno"></div>
+          <div class="photo-only"><img src="Cuarto aux2.jpeg" alt="Habitación auxiliar"></div>
+          <div class="photo-only"><img src="Cuarto aux3.jpeg" alt="Otra vista habitación auxiliar"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <h2>Habitación 2</h2>
+        <div class="gallery">
+          <div class="photo-only"><img src="Cuarto A_1.jpeg" alt="Habitación auxiliar dos"></div>
+          <div class="photo-only"><img src="Cuarto A_2.jpeg" alt="Habitación auxiliar dos"></div>
+          <div class="photo-only"><img src="Cuarto A_3.jpeg" alt="Habitación auxiliar dos"></div>
+          <div class="photo-only"><img src="Cuarto A_4.jpeg" alt="Habitación auxiliar dos"></div>
+          <div class="photo-only"><img src="Cuarto A_5.jpeg" alt="Habitación auxiliar dos"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <h2>Habitación principal</h2>
+        <div class="gallery">
+          <div class="photo-only"><img src="CUARTO PPAL.jpeg" alt="Habitación principal"></div>
+          <div class="photo-only"><img src="Cuarto ppal.jpeg" alt="Habitación principal"></div>
+          <div class="photo-only"><img src="Cuarto ppal2.jpeg" alt="Habitación principal"></div>
+          <div class="photo-only"><img src="Cuarto ppal3.jpeg" alt="Habitación principal"></div>
+          <div class="photo-only"><img src="VESTIER_CUARTO PPAL.jpeg" alt="Vestier habitación principal"></div>
+          <div class="photo-only"><img src="VESTIER_BAÑO CUARTO PPAL.jpeg" alt="Vestier y baño principal"></div>
+          <div class="photo-only"><img src="BAÑO CUARTO PPAL.jpeg" alt="Baño principal"></div>
+          <div class="photo-only"><img src="BALCON CTO PPAL.jpeg" alt="Balcón del cuarto principal"></div>
+          <div class="photo-only"><img src="Balcon cuarto ppal.jpeg" alt="Otra vista del balcón principal"></div>
+          <div class="photo-only"><img src="VISTA BALCON CTO PPAL.jpeg" alt="Vista desde el balcón principal"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <h2>Complementos del inmueble</h2>
+        <p>Aquí puedes ver imágenes adicionales del apartamento y del conjunto en formato tipo banner.</p>
+
+        <div class="banner-strip">
+          <div class="banner-slide">
+            <img src="BODEGA.jpeg" alt="Bodega del inmueble">
+          </div>
+          <div class="banner-slide">
+            <img src="bodega3.jpeg" alt="Otra vista de la bodega">
+          </div>
+          <div class="banner-slide">
+            <img src="CONJUNTO.jpg" alt="Vista general del conjunto">
+          </div>
+          <div class="banner-slide">
+            <img src="FACHADA.jpg" alt="Fachada del conjunto">
+          </div>
+          <div class="banner-slide">
+            <img src="Fachada conjunto.jpg" alt="Otra vista de la fachada del conjunto">
+          </div>
+          <div class="banner-slide">
+            <img src="Entrada apto.jpeg" alt="Detalle de entrada al apartamento">
+          </div>
+          <div class="banner-slide">
+            <img src="Espacio mueble.jpeg" alt="Espacio adicional del apartamento">
+          </div>
+          <div class="banner-slide">
+            <img src="Balcon cuarto ppal.jpeg" alt="Otra vista del balcón principal">
+          </div>
+          <div class="banner-slide">
+            <img src="estudio2.jpeg" alt="Espacio flexible o estudio">
+          </div>
+          <div class="banner-slide">
+            <img src="Gym entrada.jpeg" alt="Detalle adicional">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <h2>Zonas comunes</h2>
+        <div class="gallery">
+          <div class="photo-only"><img src="PISCINA GENERAL.jpeg" alt="Piscina cubierta"></div>
+          <div class="photo-only"><img src="PISCINA NIÑOS.jpeg" alt="Piscina niños"></div>
+          <div class="photo-only"><img src="GYM.jpeg" alt="Gimnasio"></div>
+          <div class="photo-only"><img src="CANCHA SQUASH.jpeg" alt="Cancha de squash"></div>
+          <div class="photo-only"><img src="JACUZZI.jpeg" alt="Jacuzzi"></div>
+          <div class="photo-only"><img src="SAUNA.jpeg" alt="Sauna"></div>
+          <div class="photo-only"><img src="TURCO.jpeg" alt="Turco"></div>
+          <div class="photo-only"><img src="SALON SOCIAL.jpeg" alt="Salon social"></div>
+          <div class="photo-only"><img src="BQQ.jpeg" alt="Zona BBQ"></div>
+          <div class="photo-only"><img src="BQQ 2.jpeg" alt="Otra vista zona BBQ"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <h2>Videos de las zonas sociales</h2>
+        <p>Conoce mejor las amenidades y espacios comunes del conjunto a través de estos recorridos en video.</p>
+
+        <div class="video-grid">
+          <div class="video-card">
+            <video controls preload="metadata">
+              <source src="TEATRINO.mp4" type="video/mp4">
+              Tu navegador no soporta la reproducción de video.
+            </video>
+            <p>Teatrino y espacios sociales del conjunto.</p>
+          </div>
+
+          <div class="video-card">
+            <video controls preload="metadata">
+              <source src="JUEGOS.mp4" type="video/mp4">
+              Tu navegador no soporta la reproducción de video.
+            </video>
+            <p>Zona de juegos y espacios familiares.</p>
+          </div>
+
+          <div class="video-card">
+            <video controls preload="metadata">
+              <source src="PLAY GROUND.mp4" type="video/mp4">
+              Tu navegador no soporta la reproducción de video.
+            </video>
+            <p>Playground y áreas comunes del conjunto.</p>
+          </div>
+
+          <div class="video-card">
+            <video controls preload="metadata">
+              <source src="ZONAS HUMEDAS.mp4" type="video/mp4">
+              Tu navegador no soporta la reproducción de video.
+            </video>
+            <p>Zonas húmedas y espacios de bienestar.</p>
+          </div>
+
+          <div class="video-card">
+            <video controls preload="metadata">
+              <source src="PISCINA.mp4" type="video/mp4">
+              Tu navegador no soporta la reproducción de video.
+            </video>
+            <p>Piscina y amenidades del conjunto.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="videos">
-    <div class="card video-links">
-    <h2>Videos del proyecto</h2>
-    <p>El proyecto Sol Creciente se presenta como un parque residencial dentro de Ciudad del Sol con club house, gimnasio, piscina climatizada, juegos, squash, BBQ, zonas verdes y teatrino. El video del Club House también destaca zonas como gimnasio dotado, salón de spinning, piscina cubierta climatizada, juegos, squash, sauna, turco y jacuzzi.</p>
-    <p><a href="https://www.youtube.com/watch?v=C2oJfjfhyuc" target="_blank">Ver video de la constructora: Sol Creciente | Avance de obra Julio 2019</a></p>
-    <p><a href="https://www.youtube.com/watch?v=drjYga4Jx5c" target="_blank">Ver video Club House: Parque Residencial Sol Creciente - Club House</a></p>
-  </div>
-</section>
+    <div class="container">
+      <div class="card video-links">
+        <h2>Videos del proyecto</h2>
+        <p>El proyecto Sol Creciente se presenta como un parque residencial dentro de Ciudad del Sol con club house, gimnasio, piscina climatizada, juegos, squash, BBQ, zonas verdes y teatrino. El video del Club House también destaca zonas como gimnasio dotado, salón de spinning, piscina cubierta climatizada, juegos, squash, sauna, turco y jacuzzi.</p>
+        <p><a href="https://www.youtube.com/watch?v=C2oJfjfhyuc" target="_blank">Ver video de la constructora: Sol Creciente | Avance de obra Julio 2019</a></p>
+        <p><a href="https://www.youtube.com/watch?v=drjYga4Jx5c" target="_blank">Ver video Club House: Parque Residencial Sol Creciente - Club House</a></p>
+      </div>
+    </div>
+  </section>
 
-    <section class="section">
+  <section class="section">
+    <div class="container">
       <div class="card">
         <h2>Contacto</h2>
         <p><strong>Precio visible:</strong> $400.000.000 COP</p>
@@ -558,8 +561,8 @@
           <a class="btn btn-secondary" href="https://www.youtube.com/watch?v=drjYga4Jx5c" target="_blank">Ver video Club House</a>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <footer>
     <div class="container">Apartamento en venta en Sol Creciente, Mosquera | Precio: $400.000.000 COP</div>

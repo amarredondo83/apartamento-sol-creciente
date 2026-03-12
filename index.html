@@ -5,16 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Apartamento en venta | Sol Creciente Mosquera</title>
   <style>
-    :root {
-      --bg: #f5f7fb;
-      --card: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --primary: #0f766e;
-      --secondary: #0284c7;
-      --gold: #f59e0b;
-      --line: #e5e7eb;
-    }
+    .photo-only {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.photo-only img {
+  width: 100%;
+  height: 420px;
+  object-fit: contain;
+  display: block;
+  background: #f3f4f6;
+}
+
+@media (max-width: 768px) {
+  .photo-only img {
+    height: 280px;
+  }
+}
+
     .video-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -63,9 +74,13 @@
       margin: 0 auto;
     }
     .hero {
-      background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.45)), url('BALCON-SALA-COMEDOR.jpg') center/cover no-repeat;
-      color: #fff;
-      padding: 78px 0;
+  background:
+    linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.55)),
+    url('CONJUNTO.jpg') center center / cover no-repeat;
+  color: #fff;
+  padding: 100px 0;
+}
+
     }
     h1,h2,h3 { margin: 0 0 12px; }
     h1 { font-size: 2.3rem; }
@@ -235,40 +250,132 @@
     </section>
 
     <section class="section">
-      <div class="card">
-        <h2>Galería del apartamento</h2>
-        <div class="gallery">
-          <figure><img src="BALCON SALA COMEDOR.jpeg" alt="Sala comedor con balcón"><figcaption>Balcon principal vista interior.</figcaption></figure>
-          <figure><img src="BALCON SALA_COMEDOR.jpeg" alt="Balcón social"><figcaption>Balcón social con vista interna al conjunto.</figcaption></figure>
-          <figure><img src="COCINA 1.jpeg" alt="Cocina principal"><figcaption>Cocina abierta.</figcaption></figure>
-          <figure><img src="COCINA 2.jpeg" alt="Cocina lateral"><figcaption>Acabados funcionales y buena distribución.</figcaption></figure>
-          <figure><img src="CUARTO PPAL.jpeg" alt="Habitación principal"><figcaption>Habitación principal con salida a balcón.</figcaption></figure>
-          <figure><img src="VESTIER_CUARTO PPAL.jpeg" alt="Vestier habitación principal"><figcaption>Vestier en la alcoba principal.</figcaption></figure>
-          <figure><img src="BAÑO CUARTO PPAL.jpeg" alt="Baño principal"><figcaption>Baño privado de la habitación principal.</figcaption></figure>
-          <figure><img src="CUARTO_A.jpeg" alt="Habitación auxiliar"><figcaption>Habitación auxiliar con buena entrada de luz.</figcaption></figure>
-          <figure><img src="BAÑO AUX.jpeg" alt="Baño auxiliar"><figcaption>Baño auxiliar con división en vidrio templado.</figcaption></figure>
-          <figure><img src="VISTA BALCON CTO PPAL.jpeg" alt="Vista desde balcón principal"><figcaption>Vista desde el balcón de la alcoba principal.</figcaption></figure>
-          <figure><img src="PATIO ROPAS.jpeg" alt="Zona de ropas"><figcaption>Zona de ropas independiente.</figcaption></figure>
-          <figure><img src="BALCON.jpeg" alt="Sala con balcón"><figcaption>Otra vista de la zona social.</figcaption></figure>
-        </div>
-      </div>
-    </section>
+  <div class="card">
+    <h2>Entrada</h2>
+    <div class="gallery">
+      <div class="photo-only"><img src="FACHADA.jpg" alt="Fachada del conjunto"></div>
+      <div class="photo-only"><img src="CONJUNTO.jpg" alt="Vista del conjunto"></div>
+      <div class="photo-only"><img src="ENTRADA.jpeg" alt="Entrada al apartamento"></div>
+    </div>
+  </div>
+</section>
 
-    <section class="section">
-      <div class="card">
-        <h2>Zonas comunes</h2>
-        <div class="gallery">
-          <figure><img src="PISCINA GENERAL.jpeg" alt="Piscina cubierta"><figcaption>Piscina cubierta climatizada.</figcaption></figure>
-          <figure><img src="PISCINA NIÑOS.jpeg" alt="Piscina niños"><figcaption>Piscina para niños.</figcaption></figure>
-          <figure><img src="GYM.jpeg" alt="Gimnasio"><figcaption>Gimnasio dotado.</figcaption></figure>
-          <figure><img src="CANCHA SQUASH.jpeg" alt="Cancha squash"><figcaption>Cancha de squash.</figcaption></figure>
-          <figure><img src="JACUZZI.jpeg" alt="Jacuzzi"><figcaption>Jacuzzi.</figcaption></figure>
-          <figure><img src="SAUNA.jpeg" alt="Sauna"><figcaption>Sauna.</figcaption></figure>
-          <figure><img src="TURCO.jpeg" alt="Turco"><figcaption>Turco.</figcaption></figure>
-          <figure><img src="HALL SALAS.jpeg" alt="Zona social conjunto"><figcaption>Espacios comunes del conjunto.</figcaption></figure>
-        </div>
-      </div>
-    </section>
+<section class="section">
+  <div class="card">
+    <h2>Sala comedor</h2>
+    <div class="gallery">
+      <div class="photo-only"><img src="SALA_CHIMENEA.jpeg" alt="Sala con chimenea"></div>
+      <div class="photo-only"><img src="COMEDOR.jpeg" alt="Comedor"></div>
+      <div class="photo-only"><img src="COMEDOR CHIMENEA.jpeg" alt="Sala comedor con chimenea"></div>
+      <div class="photo-only"><img src="HALL SALAS.jpeg" alt="Zona social interior"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card">
+    <h2>Balcón social</h2>
+    <div class="gallery">
+      <div class="photo-only"><img src="BALCON SALA COMEDOR.jpeg" alt="Balcón social"></div>
+      <div class="photo-only"><img src="BALCON SALA_COMEDOR.jpeg" alt="Otra vista del balcón social"></div>
+      <div class="photo-only"><img src="BALCON.jpeg" alt="Balcón de la zona social"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card">
+    <h2>Cocina</h2>
+    <div class="gallery">
+      <div class="photo-only"><img src="COCINA 1.jpeg" alt="Cocina abierta"></div>
+      <div class="photo-only"><img src="COCINA 2.jpeg" alt="Cocina lateral"></div>
+      <div class="photo-only"><img src="COCINA 3.jpeg" alt="Otra vista de la cocina"></div>
+      <div class="photo-only"><img src="PATIO ROPAS.jpeg" alt="Patio de ropas"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card">
+    <h2>Hall interior</h2>
+    <div class="gallery">
+      <div class="photo-only"><img src="HALL PPAL.jpeg" alt="Hall principal"></div>
+      <div class="photo-only"><img src="HALL PPAL 1.jpeg" alt="Hall principal uno"></div>
+      <div class="photo-only"><img src="HALL PPAL 2.jpeg" alt="Hall principal dos"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card">
+    <h2>Habitación auxiliar 1</h2>
+    <div class="gallery">
+      <div class="photo-only"><img src="CUARTO_A.jpeg" alt="Habitación auxiliar uno"></div>
+      <div class="photo-only"><img src="CUARTO_A1.jpeg" alt="Otra vista habitación auxiliar uno"></div>
+      <div class="photo-only"><img src="BAÑO AUX.jpeg" alt="Baño auxiliar"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card">
+    <h2>Habitación auxiliar 2</h2>
+    <div class="gallery">
+      <div class="photo-only"><img src="CUARTO_B.jpeg" alt="Habitación auxiliar dos"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card">
+    <h2>Habitación principal</h2>
+    <div class="gallery">
+      <div class="photo-only"><img src="CUARTO PPAL.jpeg" alt="Habitación principal"></div>
+      <div class="photo-only"><img src="VESTIER_CUARTO PPAL.jpeg" alt="Vestier habitación principal"></div>
+      <div class="photo-only"><img src="VESTIER_BAÑO CUARTO PPAL.jpeg" alt="Vestier y baño principal"></div>
+      <div class="photo-only"><img src="BAÑO CUARTO PPAL.jpeg" alt="Baño principal"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card">
+    <h2>Balcón habitación principal</h2>
+    <div class="gallery">
+      <div class="photo-only"><img src="BALCON CTO PPAL.jpeg" alt="Balcón habitación principal"></div>
+      <div class="photo-only"><img src="VBALCON CTO PPAL.jpeg" alt="Vista desde balcón principal"></div>
+      <div class="photo-only"><img src="VISTA BALCON CTO PPAL.jpeg" alt="Vista exterior desde el balcón"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card">
+    <h2>Complementos del inmueble</h2>
+    <div class="gallery">
+      <div class="photo-only"><img src="BODEGA.jpeg" alt="Bodega"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card">
+    <h2>Zonas comunes</h2>
+    <div class="gallery">
+      <div class="photo-only"><img src="PISCINA GENERAL.jpeg" alt="Piscina cubierta"></div>
+      <div class="photo-only"><img src="PISCINA NIÑOS.jpeg" alt="Piscina niños"></div>
+      <div class="photo-only"><img src="GYM.jpeg" alt="Gimnasio"></div>
+      <div class="photo-only"><img src="CANCHA SQUASH.jpeg" alt="Cancha de squash"></div>
+      <div class="photo-only"><img src="JACUZZI.jpeg" alt="Jacuzzi"></div>
+      <div class="photo-only"><img src="SAUNA.jpeg" alt="Sauna"></div>
+      <div class="photo-only"><img src="TURCO.jpeg" alt="Turco"></div>
+      <div class="photo-only"><img src="SALON SOCIAL.jpeg" alt="Salon social"></div>
+      <div class="photo-only"><img src="BQQ.jpeg" alt="Zona BBQ"></div>
+      <div class="photo-only"><img src="BQQ 2.jpeg" alt="Otra vista zona BBQ"></div>
+    </div>
+  </div>
+</section>
+
     
 <section class="section">
   <div class="card">

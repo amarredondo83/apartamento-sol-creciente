@@ -15,6 +15,41 @@
       --gold: #f59e0b;
       --line: #e5e7eb;
     }
+    .video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 18px;
+  margin-top: 16px;
+}
+
+.video-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.video-card video {
+  width: 100%;
+  height: 420px;
+  object-fit: contain;
+  display: block;
+  background: #f3f4f6;
+}
+
+.video-card p {
+  margin: 0;
+  padding: 12px 14px;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .video-card video {
+    height: 300px;
+  }
+}
+
     * { box-sizing: border-box; }
     body {
       margin: 0;
@@ -103,8 +138,8 @@
     }
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 14px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 18px;
       margin-top: 16px;
     }
     figure {
@@ -116,9 +151,10 @@
     }
     img {
       width: 100%;
-      height: 220px;
-      object-fit: cover;
+      height: 420px;
+      object-fit: contain;
       display: block;
+      background: #f3f4f6;
     }
     figcaption {
       padding: 10px 12px;
@@ -164,8 +200,9 @@
     <section class="section">
       <div class="card">
         <h2>Descripción del inmueble</h2>
-        <p>Apartamento ubicado en Sol Creciente, Mosquera, con 83 m² muy bien distribuidos. Cuenta con sala-comedor amplia, cocina abierta, chimenea, tres habitaciones, dos baños, pisos laminados, parqueadero, bodega y doble balcón.</p>
-        <p>El balcón de la sala-comedor tiene vista interna al conjunto y el balcón de la alcoba principal tiene vista hacia la calle principal. La habitación principal además cuenta con vestier y baño privado.</p>
+        <p>Apartamento ubicado en Mosquera, Cundinamarca, en la ciudadela Los Soles, dentro del conjunto residencial Sol Creciente. Su ubicación en sexto piso le brinda excelente iluminación natural, buena ventilación y una vista agradable.</p> 
+        </p>Cuenta con 83 m² muy bien distribuidos, sala-comedor amplia, cocina abierta, chimenea, tres habitaciones, dos baños, pisos laminados, parqueadero, bodega y doble balcón. El balcón de la sala-comedor tiene vista interna al conjunto </p> el balcón de la alcoba principal tiene vista hacia la calle principal. La habitación principal además cuenta con vestier y baño privado.</p>
+        <p>el balcón de la alcoba principal tiene vista hacia la calle principal. La habitación principal además cuenta con vestier y baño privado.</p>
       </div>
     </section>
 
@@ -202,18 +239,18 @@
       <div class="card">
         <h2>Galería del apartamento</h2>
         <div class="gallery">
-          <figure><img src="BALCON SALA COMEDOR.jpeg" alt="Sala comedor con balcón"><figcaption>Sala-comedor con excelente iluminación natural.</figcaption></figure>
-          <figure><img src="BALCON.jpeg" alt="Balcón social"><figcaption>Balcón social con vista interna al conjunto.</figcaption></figure>
-          <figure><img src="COCINA 1.jpeg" alt="Cocina principal"><figcaption>Cocina abierta integrada a la zona social.</figcaption></figure>
+          <figure><img src="BALCON SALA COMEDOR.jpeg" alt="Sala comedor con balcón"><figcaption>Balcon principal vista interior.</figcaption></figure>
+          <figure><img src="BALCON SALA_COMEDOR.jpeg" alt="Balcón social"><figcaption>Balcón social con vista interna al conjunto.</figcaption></figure>
+          <figure><img src="COCINA 1.jpeg" alt="Cocina principal"><figcaption>Cocina abierta.</figcaption></figure>
           <figure><img src="COCINA 2.jpeg" alt="Cocina lateral"><figcaption>Acabados funcionales y buena distribución.</figcaption></figure>
-          <figure><img src="CUARTO-PPAL.jpeg" alt="Habitación principal"><figcaption>Habitación principal con salida a balcón.</figcaption></figure>
+          <figure><img src="CUARTO PPAL.jpeg" alt="Habitación principal"><figcaption>Habitación principal con salida a balcón.</figcaption></figure>
           <figure><img src="VESTIER_CUARTO PPAL.jpeg" alt="Vestier habitación principal"><figcaption>Vestier en la alcoba principal.</figcaption></figure>
-          <figure><img src="BANO CUARTO PPAL.jpeg" alt="Baño principal"><figcaption>Baño privado de la habitación principal.</figcaption></figure>
+          <figure><img src="BAÑO CUARTO PPAL.jpeg" alt="Baño principal"><figcaption>Baño privado de la habitación principal.</figcaption></figure>
           <figure><img src="CUARTO_A.jpeg" alt="Habitación auxiliar"><figcaption>Habitación auxiliar con buena entrada de luz.</figcaption></figure>
-          <figure><img src="BANO AUX.jpeg" alt="Baño auxiliar"><figcaption>Baño auxiliar con división en vidrio templado.</figcaption></figure>
+          <figure><img src="BAÑO AUX.jpeg" alt="Baño auxiliar"><figcaption>Baño auxiliar con división en vidrio templado.</figcaption></figure>
           <figure><img src="VISTA BALCON CTO PPAL.jpeg" alt="Vista desde balcón principal"><figcaption>Vista desde el balcón de la alcoba principal.</figcaption></figure>
           <figure><img src="PATIO ROPAS.jpeg" alt="Zona de ropas"><figcaption>Zona de ropas independiente.</figcaption></figure>
-          <figure><img src="BALCON SALA_COMEDOR.jpeg" alt="Sala con balcón"><figcaption>Otra vista de la zona social.</figcaption></figure>
+          <figure><img src="BALCON.jpeg" alt="Sala con balcón"><figcaption>Otra vista de la zona social.</figcaption></figure>
         </div>
       </div>
     </section>
@@ -223,7 +260,7 @@
         <h2>Zonas comunes</h2>
         <div class="gallery">
           <figure><img src="PISCINA GENERAL.jpeg" alt="Piscina cubierta"><figcaption>Piscina cubierta climatizada.</figcaption></figure>
-          <figure><img src="PISCINA NINOS.jpeg" alt="Piscina niños"><figcaption>Piscina para niños.</figcaption></figure>
+          <figure><img src="PISCINA NIÑOS.jpeg" alt="Piscina niños"><figcaption>Piscina para niños.</figcaption></figure>
           <figure><img src="GYM.jpeg" alt="Gimnasio"><figcaption>Gimnasio dotado.</figcaption></figure>
           <figure><img src="CANCHA SQUASH.jpeg" alt="Cancha squash"><figcaption>Cancha de squash.</figcaption></figure>
           <figure><img src="JACUZZI.jpeg" alt="Jacuzzi"><figcaption>Jacuzzi.</figcaption></figure>
@@ -233,12 +270,65 @@
         </div>
       </div>
     </section>
+    
+<section class="section">
+  <div class="card">
+    <h2>Videos de las zonas sociales</h2>
+    <p>Conoce mejor las amenidades y espacios comunes del conjunto a través de estos recorridos en video.</p>
 
+    <div class="video-grid">
+      <div class="video-card">
+        <video controls preload="metadata">
+          <source src="TEATRINO.mp4" type="video/mp4">
+          Tu navegador no soporta la reproducción de video.
+        </video>
+        <p>Recorrido de zonas sociales y áreas comunes del conjunto.</p>
+      </div>
+
+      <div class="video-card">
+        <video controls preload="metadata">
+          <source src="JUEGOS.mp4" type="video/mp4">
+          Tu navegador no soporta la reproducción de video.
+        </video>
+        <p>Vista complementaria de amenidades y espacios de bienestar.</p>
+      </div>
+    </div>
+  </div>
+
+    <div class="video-grid">
+      <div class="video-card">
+        <video controls preload="metadata">
+          <source src="PLAY GROUND.mp4" type="video/mp4">
+          Tu navegador no soporta la reproducción de video.
+        </video>
+        <p>Recorrido de zonas sociales y áreas comunes del conjunto.</p>
+      </div>
+
+      <div class="video-card">
+        <video controls preload="metadata">
+          <source src="ZONAS HUMEDAS.mp4" type="video/mp4">
+          Tu navegador no soporta la reproducción de video.
+        </video>
+        <p>Vista complementaria de amenidades y espacios de bienestar.</p>
+      </div>
+    </div>
+  </div>
+
+<div class="video-card">
+        <video controls preload="metadata">
+          <source src="PISCINA.mp4" type="video/mp4">
+          Tu navegador no soporta la reproducción de video.
+        </video>
+        <p>Vista complementaria de amenidades y espacios de bienestar.</p>
+      </div>
+    </div>
+  </div>
+</section>    
     <section class="section" id="videos">
       <div class="card video-links">
         <h2>Videos del proyecto</h2>
         <p>El proyecto Sol Creciente se presenta como un parque residencial dentro de Ciudad del Sol con 20 torres de 8 pisos y club house con gimnasio, piscina climatizada, juegos, squash, BBQ, zonas verdes y teatrino. El video de Club House también destaca zonas como gimnasio dotado, salón de spinning, piscina cubierta climatizada, juegos, squash, sauna, turco y jacuzzi. [page:195][page:197]</p>
-        <p><a href="https://www.youtube.com/watch?v=6U3YFxQHYFw" target="_blank">Ver video de la constructora: Sol Creciente | Avance de obra Julio 2019</a></p>
+        <p><a href="https://www.youtube.com/watch?v=C2oJfjfhyuc" target="_blank">Ver video de la constructora: Sol Creciente | Avance de obra Julio 2019</a></p>
         <p><a href="https://www.youtube.com/watch?v=drjYga4Jx5c" target="_blank">Ver video Club House: Parque Residencial Sol Creciente - Club House</a></p>
       </div>
     </section>
